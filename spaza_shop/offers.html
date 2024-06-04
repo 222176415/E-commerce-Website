@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Spaza Shop - Special Offers </title>
+  <link rel="stylesheet" href="styles.css">
+  <!--ession variable to store the login status-->
+  <?php
+  session_start();
+  if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+    header("Location: welcome.php");
+    exit;
+  }
+  ?>
+</head>
+
+<body>
+  <header class="header">
+    <h1>Spaza Shop</h1>
+
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="offers.html">Special Offers</a></li>
+        <li><a href="About_Us.html">About Us</a></li>
+
+        <li><a href="login.html">
+            <button class="login-button">Login</button>
+          </a></li>
+
+      </ul>
+    </nav>
+  </header>
+  <!-- Special Offers Page -->
+
+  <div class="container">
+    <h1>Special Offers</h1>
+    <p>Get the best deals on our top products!</p>
+    <div class="product-grid">
+      <div class="product">
+        <img src="Images/Products/Monster.jpeg" alt="Product 1" height="150" class="product-image">
+        <div class="product-info">
+          <h2>Monster Original Flavoured 500ML</h2>
+          <p>
+            <s><span class="old-price">R13.50</span><br></s>
+            <span class="new-price">R10.00</span>
+            <span class="discount">Save R3.50</span>
+          </p>
+          <form action="check_login.php" method="post">
+            <input type="hidden" name="product_name" value="<?php echo $product_name;?>">
+            <input type="hidden" name="product_price" value="<?php echo $product_price;?>">
+            <button class="btn-cta" type="submit">Buy Now</button>
+        </form>
+        </div>
+      </div>
+
+      <!------>
+      <div class="product">
+        <img src="Images/Products/FantaGrape.jpeg" alt="Product 1" height="150" class="product-image">
+        <div class="product-info">
+          <h2>Fanta Grape 250ML</h2>
+          <p>
+            <s><span class="old-price">R15.99</span><br></s>
+            <span class="new-price">R8.99</span>
+            <span class="discount">Save R7</span>
+          </p>
+          <form action="check_login.php" method="post">
+            <button class="btn-cta" type="submit">Buy Now</button>
+          </form>
+        </div>
+      </div>
+      <!------>
+      <div class="product">
+        <img src="Images/Products/Coke1.jpeg" alt="Product 1" height="150" class="product-image">
+        <div class="product-info">
+          <h2>Coke Original Flavoured 500ML</h2>
+          <p>
+            <s><span class="old-price">R18.00</span><br></s>
+            <span class="new-price">R13.50</span>
+            <span class="discount">Save R6</span>
+          </p>
+          <form action="check_login.php" method="post">
+            <button class="btn-cta" type="submit">Buy Now</button>
+          </form>
+        </div>
+      </div>
+      <!------>
+      <div class="product">
+        <img src="Images/Products/M&M sweets.jpeg" alt="Product 1" height="150" class="product-image">
+        <div class="product-info">
+          <h2>M&M'S  Chocolate Coated Candy Almond</h2>
+          <p>
+            <s><span class="old-price">R35.00</span><br></s>
+            <span class="new-price">R20.99</span>
+            <span class="discount">Save R14</span>
+          </p>
+          <form action="check_login.php" method="post">
+            <button class="btn-cta" type="submit">Buy Now</button>
+          </form>
+        </div>
+      </div>
+      <!------>
+      <div class="product">
+        <img src="Images/Products/Milk.jpeg" alt="Product 1" height="150" class="product-image">
+        <div class="product-info">
+          <h5>Parmalat Full Cream Milk <br>Long Life</h5>
+          <p>
+            <s><span class="old-price">R26.99</span><br></s>
+            <span class="new-price">R18.00</span>
+            <span class="discount">Save R9</span>
+          </p>
+          <form action="check_login.php" method="post">
+            <button class="btn-cta" type="submit">Buy Now</button>
+          </form>
+        </div>
+      </div>
+      <!------>
+      <div class="product">
+        <img src="Images/Products/Oreo.jpeg" alt="Product 1" height="150" class="product-image">
+        <div class="product-info">
+          <h2>Mini Oreo Biscuits</h2>
+          <p>
+            <s><span class="old-price">R30</span><br></s>
+            <span class="new-price">R24.50</span>
+            <span class="discount">Save R5.50</span>
+          </p>
+          <form action="check_login.php" method="post">
+            <button class="btn-cta" type="submit">Buy Now</button>
+          </form>
+        </div>
+      </div>
+      <!------>
+      <div class="product">
+        <img src="Images/Products/Pringles.jpeg" alt="Product 1" height="150" class="product-image">
+        <div class="product-info">
+          <h2>Pringles Soft Chips /h2>
+          <p>
+            <s><span class="old-price">R38.99</span><br></s>
+            <span class="new-price">R28.99</span>
+            <span class="discount">Save R10</span>
+          </p>
+          <form action="check_login.php" method="post">
+            <button class="btn-cta" type="submit">Buy Now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <p>&copy; 2024 Spaza Shop - Come Shop With Us</p>
+    </footer>
+</body>
+</html>
