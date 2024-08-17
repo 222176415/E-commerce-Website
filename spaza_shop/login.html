@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spaza Shop - Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Spaza Shop</h1>
+   
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.php">Products</a></li>
+            <li><a href="offers.html">Special Offers</a></li>
+            <li><a href="loyalty.html">Loyalty Program</a></li>
+            <li><a href="login.html">
+                <button class="login-button">Login</button>
+            </a></li>
+            
+        </ul>
+    </nav>
+</header>
+<main class="main-content">
+    <section class="login">
+      <h2>Login</h2>
+      <p>Access your account and start shopping</p>
+      <form action="login.php" method="post">
+        <label for="username">Username or Email</label>
+        <input type="text" id="username" name="username">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password">
+        <input type="checkbox" id="remember-me" name="remember-me">
+        <label for="remember-me">Remember Me</label>
+        <button class="login-button">Login</button>
+        <p><a href="#">Forgot Password?</a></p>
+        <p>Don't have an account? <a href="signin.html">Sign in</a></p>
+      </form>
+    </section>
+  </main>
+    <footer class="footer">
+        <p>&copy; 2024 Spaza Shop</p>
+    </footer>
+</body>
+</html>
